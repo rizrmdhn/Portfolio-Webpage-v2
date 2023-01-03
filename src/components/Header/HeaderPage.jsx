@@ -32,24 +32,24 @@ export default function HeaderPage() {
           ></button>
         </div>
         <div className="offcanvas-body text-start">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <Link class="nav-link" to="/">
+          <ul className="nav flex-column">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
                 About
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Project">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Project">
                 Project
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Experience">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Experience">
                 Experience
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Social">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Social">
                 Social
               </Link>
             </li>
