@@ -1,0 +1,9 @@
+.Footer {
+  color: white;
+  background-color: #202742;
+  width: 100%;
+  height: 45px;
+}
+.Footer > p {
+    margin: 15px auto;
+}

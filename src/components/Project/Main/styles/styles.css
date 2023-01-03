@@ -1,0 +1,52 @@
+.project-conatiner {
+  width: 1200px;
+  height: 550px;
+  overflow-y: scroll;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.project-card {
+  width: 450px;
+  margin: 15px 15px;
+}
+.card-icon-container {
+  margin: auto !important;
+}
+.project-icon {
+  font-size: 50px;
+  margin: auto 15px;
+  color: black;
+}
+.bi-globe {
+  cursor: pointer;
+}
+.link-container {
+  width: 305px;
+  margin: 10px auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.description-container {
+  height: 70px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.project-last-updated {
+  margin: auto;
+}
+
+/* scroll bar */
+.project-conatiner::-webkit-scrollbar {
+  width: 10px;
+}
+.project-conatiner::-webkit-scrollbar-track {
+  background: #181D31;
+}
+.project-conatiner::-webkit-scrollbar-thumb {
+  background: #242c49;
+}
