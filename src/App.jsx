@@ -2,8 +2,10 @@ import axios from "axios";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AboutPage from "./components/About/AboutPage";
+import ExperiencePage from "./components/Experience/ExperiencePage";
 import HeaderPage from "./components/Header/HeaderPage";
 import LoadProjectItem from "./components/Project/LoadProjectItem";
+import SocialPage from "./components/Social/SocialPage";
 
 const api = "https://api.github.com/users/rizrmdhn/repos";
 
@@ -49,6 +51,8 @@ class App extends Component {
                     />
                   }
                 />
+                <Route exact path="/Experience" element={<ExperiencePage />} />
+                <Route exact path="/Social" element={<SocialPage />} />
               </Routes>
             </div>
           </BrowserRouter>
