@@ -1,3 +1,6 @@
+.Header {
+  border-bottom: 2px #2b3457 solid;
+}
 .offcanvas.offcanvas-end {
   top: -90px !important;
   right: 0;
