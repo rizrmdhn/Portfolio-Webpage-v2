@@ -1,0 +1,38 @@
+.social-container {
+  color: white;
+}
+.twitter-link {
+  margin: auto 25px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+  padding: 10px;
+  border-radius: 10px;
+}
+.twitter-link:hover {
+  background-color: #1da1f2;
+  color: white;
+  font-size: 45px;
+}
+.bi-twitter {
+  margin-right: 10px;
+}
+.github-link {
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+  padding: 10px;
+  border-radius: 10px;
+}
+.github-link:hover {
+  background-color: #333;
+  color: white;
+  font-size: 45px;
+}
+.bi-github {
+    margin-right: 10px;
+}
