@@ -7,7 +7,7 @@ export default function ProjectContainer({ lists, onSearch, onSearchType }) {
     onSearch(event.target.value);
   };
   return (
-    <div className="project-conatiner">
+    <div className="project-container animate__animated animate__fadeIn">
       <div className="project-menu">
         <div className="form-floating mb-3">
           <input

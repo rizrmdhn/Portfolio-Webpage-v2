@@ -1,0 +1,25 @@
+.experience-container {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 35px;
+}
+.experience-card {
+  max-width: 450px;
+  background-color: #2b3457 !important;
+  color: white;
+  margin: auto;
+}
+.experience-card > .card-header {
+  display: flex;
+}
+.experience-card > .card-header > .year {
+  margin-top: 15px;
+  margin-right: 15px;
+  font-weight: 600;
+}
+.experience-card > .card-header > .month {
+  margin-top: 15px;
+  font-weight: 600;
+}

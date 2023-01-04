@@ -1,4 +1,4 @@
-.project-conatiner {
+.project-container {
   width: 1200px;
   height: 655px;
   margin: auto;
@@ -21,6 +21,7 @@
 .project-menu {
   border-right: 1px solid #242c49;
   margin: 0px auto;
+  height: inherit;
 }
 .accordion {
   margin-right: 25px;

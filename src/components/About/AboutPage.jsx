@@ -3,7 +3,7 @@ import "./styles/styles.css";
 
 export default function AboutPage() {
   return (
-    <div className="about-page">
+    <div className="about-page animate__animated animate__fadeIn">
       <h1>Hello My Name Is Rizki</h1>
       <div className="about">
         <h1>Im A</h1>

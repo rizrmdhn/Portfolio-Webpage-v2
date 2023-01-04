@@ -6,6 +6,7 @@ import ExperiencePage from "./components/Experience/ExperiencePage";
 import HeaderPage from "./components/Header/HeaderPage";
 import LoadProjectItem from "./components/Project/LoadProjectItem";
 import SocialPage from "./components/Social/SocialPage";
+import { ExperienceData } from "./utils/experience";
 
 const api = "https://api.github.com/users/rizrmdhn/repos";
 
@@ -16,6 +17,7 @@ class App extends Component {
       isLoading: true,
       projectList: [],
       unFilteredProjectList: [],
+      experienceList: ExperienceData(),
     };
 
     this.onSearchHandler = this.onSearchHandler.bind(this);
@@ -37,7 +39,7 @@ class App extends Component {
   }
 
   onSearchHandler(search) {
-    if (search.length !== 0 && search.trim() !== '') {
+    if (search.length !== 0 && search.trim() !== "") {
       this.setState({
         projectList: this.state.unFilteredProjectList.filter((lists) =>
           lists.name.toLowerCase().includes(search.toLowerCase())
@@ -89,7 +91,11 @@ class App extends Component {
                     />
                   }
                 />
-                <Route exact path="/Experience" element={<ExperiencePage />} />
+                <Route
+                  exact
+                  path="/Experience"
+                  element={<ExperiencePage lists={this.state.experienceList} />}
+                />
                 <Route exact path="/Social" element={<SocialPage />} />
               </Routes>
             </div>
