@@ -4,21 +4,33 @@ import Location from "./Location";
 import "./styles/styles.css";
 
 export default function HeaderPage() {
+  const Animate = () => {
+    // Look for .hamburger
+    var hamburger = document.getElementById("hamburger-menu");
+    hamburger.classList.toggle("is-active");
+  };
+
   const location = useLocation();
   return (
     <div className="Header">
-      <div className="header-item">
+      <div className="header-item animate__animated animate__fadeIn">
         <div className="location">
           <Location location={location.pathname} />
         </div>
         <div className="menu-button">
           <button
-            className="menu hamburger bi bi-list text-end"
+            id="hamburger-menu"
+            className="menu hamburger hamburger--collapse"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasMenu"
             aria-controls="offcanvasMenu"
-          ></button>
+            onClick={Animate}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
       </div>
       <div
@@ -28,17 +40,6 @@ export default function HeaderPage() {
         aria-labelledby="offcanvasMenu"
         data-bs-backdrop="false"
       >
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasMenu">
-            Menu
-          </h5>
-          <button
-            type="button"
-            className="bi bi-x-lg"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
         <div className="offcanvas-body text-start">
           <ul className="nav flex-column">
             <li className="nav-item">

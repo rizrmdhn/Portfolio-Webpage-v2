@@ -39,12 +39,15 @@ class App extends Component {
   }
 
   onSearchHandler(search) {
+    const defaultValue = (this.state.projectList =
+      this.state.unFilteredProjectList);
     if (search.length !== 0 && search.trim() !== "") {
       this.setState({
         projectList: this.state.unFilteredProjectList.filter((lists) =>
           lists.name.toLowerCase().includes(search.toLowerCase())
         ),
       });
+      return defaultValue;
     } else {
       this.setState({
         projectList: this.state.projectList,
@@ -61,7 +64,7 @@ class App extends Component {
     if (option === "HasHomepage") {
       this.setState({
         projectList: hasHompage,
-      })
+      });
       return defaultValue;
     }
     if (option !== "None") {

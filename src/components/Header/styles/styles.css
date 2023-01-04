@@ -24,27 +24,26 @@
   align-self: center;
 }
 .offcanvas.offcanvas-end {
-  top: -90px !important;
+  top: 0px ;
   right: 0;
   width: var(--bs-offcanvas-width);
-  border-left: none !important;
+  border-left: 2px solid #2b3457 !important;
   transform: translateX(100%);
 }
 .offcanvas {
   position: relative !important;
   left: 920px;
-  bottom: 0px;
+  bottom: 0;
   z-index: var(--bs-offcanvas-zindex);
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  height: 735px;
+  height: 650px;
   color: white !important;
   visibility: hidden;
-  background-color: #2b3457 !important;
+  background-color: #181d31 !important;
   background-clip: padding-box;
   outline: 0;
-  border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   transition: transform 0.3s ease-in-out;
 }
@@ -53,21 +52,18 @@
   line-height: 1.5;
   font-size: 25px;
 }
-.bi-list {
-  color: white;
-  font-size: 40px;
+.header-item {
+  height: inherit;
 }
-.bi-x-lg {
-  font-size: 30px;
-  color: white;
-  background-color: transparent;
-  border: none;
-  transition: 500ms ease-in-out;
+.menu-button > .menu {
+  height: inherit;
 }
-.bi-x-lg:hover {
-  background-color: #181d31;
-  padding: 0px 5px;
-  border-radius: 50%;
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: white !important;
+}
+.hamburger-inner {
+  background-color: white !important;
 }
 .offcanvas-body > .nav > .nav-item > .nav-link {
   color: white;
