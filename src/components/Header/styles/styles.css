@@ -1,6 +1,28 @@
 .Header {
   border-bottom: 2px #2b3457 solid;
 }
+.header-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+.location:nth-child(1) {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+.location {
+  color: white;
+  text-align: center;
+}
+.menu-button:nth-child(2) {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+}
 .offcanvas.offcanvas-end {
   top: -90px !important;
   right: 0;
@@ -10,7 +32,7 @@
 }
 .offcanvas {
   position: relative !important;
-  left: 904px;
+  left: 920px;
   bottom: 0px;
   z-index: var(--bs-offcanvas-zindex);
   display: flex;

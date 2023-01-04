@@ -25,13 +25,14 @@ export default function Accordion({ onSearchType }) {
           aria-labelledby="flush-headingOne"
           data-bs-parent="#accordionFlushExample"
         >
-          <div className="accordion-body" onChange={onSearchType}>
+          <div className="accordion-body" onChange={onSearchTypeProject}>
             <div className="form-check">
               <input
                 className="form-check-input"
                 type="radio"
-                name="DefaultOption"
+                name="option"
                 id="DefaultOption"
+                value="None"
                 defaultChecked
               />
               <label className="form-check-label" htmlFor="DefaultOption">
@@ -42,22 +43,24 @@ export default function Accordion({ onSearchType }) {
               <input
                 className="form-check-input"
                 type="radio"
-                name="Option1"
+                name="option"
                 id="Option1"
+                value="JavaScript"
               />
               <label className="form-check-label" htmlFor="Option1">
-                Option 1
+              JavaScript
               </label>
             </div>
             <div className="form-check">
               <input
                 className="form-check-input"
                 type="radio"
-                name="Option2"
+                name="option"
                 id="Option2"
+                value="Vue"
               />
               <label className="form-check-label" htmlFor="Option2">
-                Option 2
+                Vue
               </label>
             </div>
           </div>

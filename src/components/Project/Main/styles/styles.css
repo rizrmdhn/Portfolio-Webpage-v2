@@ -1,6 +1,6 @@
 .project-conatiner {
   width: 1200px;
-  height: 550px;
+  height: 655px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -19,18 +19,32 @@
   align-self: stretch;
 }
 .project-menu {
-  margin: 10px;
+  border-right: 1px solid #242c49;
+  margin: 0px auto;
+}
+.accordion {
+  margin-right: 25px;
+}
+.form-floating {
+  margin-top: 25px;
+  margin-right: 25px;
 }
 .project-card-container {
-  height: inherit;
+  margin: 25px auto;
+  margin-left: 10px;
+  height: 620px;
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr); 
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
 }
 .project-card {
   width: 425px;
   height: 206px !important;
   margin: 10px;
+  margin-top: 0px;
 }
 .card-icon-container {
   margin: auto !important;

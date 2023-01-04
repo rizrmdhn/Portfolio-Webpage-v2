@@ -7,6 +7,7 @@ export default function LoadProjectItem({
   lists,
   cards,
   onSearch,
+  onSearchType,
   isLoading,
 }) {
   return (
@@ -14,7 +15,7 @@ export default function LoadProjectItem({
       {isLoading === true ? (
         <LoadingCard cards={cards} />
       ) : (
-        <ProjectContainer lists={lists} onSearch={onSearch} />
+        <ProjectContainer lists={lists} onSearch={onSearch} onSearchType={onSearchType} />
       )}
     </>
   );

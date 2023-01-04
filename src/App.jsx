@@ -18,6 +18,7 @@ class App extends Component {
       unFilteredProjectList: [],
     };
 
+    this.onSearchHandler = this.onSearchHandler.bind(this);
     this.onSearchTypeHandler = this.onSearchTypeHandler.bind(this);
   }
 
@@ -35,16 +36,35 @@ class App extends Component {
     }, 2000);
   }
 
-  onSearchTypeHandler(search) {
-    const defaultValue = (this.state.projectList = this.state.unFilteredProjectList);
-    if (search.length !== 0 && search.trim() !== "") {
+  onSearchHandler(search) {
+    if (search.length !== 0 && search.trim() !== '') {
       this.setState({
-        projectList: this.state.projectList.filter((lists) =>
+        projectList: this.state.unFilteredProjectList.filter((lists) =>
           lists.name.toLowerCase().includes(search.toLowerCase())
         ),
       });
+    } else {
+      this.setState({
+        projectList: this.state.projectList,
+      });
+    }
+  }
+
+  onSearchTypeHandler(option) {
+    const defaultValue = (this.state.projectList =
+      this.state.unFilteredProjectList);
+    if (option !== "None") {
+      this.setState({
+        projectList: this.state.unFilteredProjectList.filter((lists) =>
+          lists.language?.toLowerCase().includes(option.toLowerCase())
+        ),
+      });
       return defaultValue;
-    };
+    } else {
+      this.setState({
+        projectList: this.state.projectList,
+      });
+    }
   }
 
   render() {
@@ -64,7 +84,8 @@ class App extends Component {
                       isLoading={this.state.isLoading}
                       lists={this.state.projectList}
                       cards={this.state.projectList.length}
-                      onSearch={this.onSearchTypeHandler}
+                      onSearch={this.onSearchHandler}
+                      onSearchType={this.onSearchTypeHandler}
                     />
                   }
                 />

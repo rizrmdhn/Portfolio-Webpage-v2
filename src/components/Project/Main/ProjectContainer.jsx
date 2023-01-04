@@ -2,7 +2,7 @@ import React from "react";
 import Accordion from "./Accordion/Accordion";
 import ProjectCard from "./ProjectCard";
 
-export default function ProjectContainer({ lists, onSearch }) {
+export default function ProjectContainer({ lists, onSearch, onSearchType }) {
   const onSearchProject = (event) => {
     onSearch(event.target.value);
   };
@@ -19,7 +19,7 @@ export default function ProjectContainer({ lists, onSearch }) {
           />
           <label htmlFor="search">Search</label>
         </div>
-        <Accordion />
+        <Accordion onSearchType={onSearchType} />
       </div>
       <ProjectCard lists={lists} />
     </div>

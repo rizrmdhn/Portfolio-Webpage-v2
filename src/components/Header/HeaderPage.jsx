@@ -1,27 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Location from "./Location";
 import "./styles/styles.css";
 
 export default function HeaderPage() {
+  const location = useLocation();
   return (
-    <div className="Header text-end">
-      <button
-        className="menu hamburger bi bi-list"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight"
-        aria-controls="offcanvasRight"
-      ></button>
-
+    <div className="Header">
+      <div className="header-item">
+        <div className="location">
+          <Location location={location.pathname} />
+        </div>
+        <div className="menu-button">
+          <button
+            className="menu hamburger bi bi-list text-end"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu"
+          ></button>
+        </div>
+      </div>
       <div
         className="offcanvas offcanvas-end"
         tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
+        id="offcanvasMenu"
+        aria-labelledby="offcanvasMenu"
         data-bs-backdrop="false"
       >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasRightLabel">
+          <h5 className="offcanvas-title" id="offcanvasMenu">
             Menu
           </h5>
           <button
