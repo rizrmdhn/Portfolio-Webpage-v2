@@ -1,17 +1,36 @@
 .project-conatiner {
   width: 1200px;
   height: 550px;
-  overflow-y: scroll;
   margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
+.project-menu:nth-child(1) {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: stretch;
+}
+.project-card-container:nth-child(2) {
+  order: 0;
+  flex: 6 1 auto;
+  align-self: stretch;
+}
+.project-menu {
+  margin: 10px;
+}
+.project-card-container {
+  height: inherit;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .project-card {
-  width: 450px;
-  margin: 15px 15px;
+  width: 425px;
+  height: 206px !important;
+  margin: 10px;
 }
 .card-icon-container {
   margin: auto !important;
@@ -31,6 +50,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.project-name {
+  font-weight: bold;
+}
 .description-container {
   height: 70px;
   margin: 10px auto;
@@ -41,12 +63,12 @@
 }
 
 /* scroll bar */
-.project-conatiner::-webkit-scrollbar {
+.project-card-container::-webkit-scrollbar {
   width: 10px;
 }
-.project-conatiner::-webkit-scrollbar-track {
-  background: #181D31;
+.project-card-container::-webkit-scrollbar-track {
+  background: #181d31;
 }
-.project-conatiner::-webkit-scrollbar-thumb {
+.project-card-container::-webkit-scrollbar-thumb {
   background: #242c49;
 }

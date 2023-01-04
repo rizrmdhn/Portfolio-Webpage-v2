@@ -42,7 +42,6 @@ body {
   flex: 1 1 auto;
   align-self: auto;
   margin: auto;
-  margin-top: 15px;
 }
 .body-container {
   display: flex;

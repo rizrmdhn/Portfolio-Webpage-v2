@@ -4,7 +4,7 @@ import ProjectBody from "./ProjectBody";
 
 export default function ProjectCard({ lists }) {
   return (
-    <div className="project-conatiner">
+    <div className="project-card-container">
       {lists.map((list) => {
         return (
           <div className="project-card card mb-3" key={list.id}>

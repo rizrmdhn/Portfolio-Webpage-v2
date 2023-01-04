@@ -15,13 +15,17 @@ class App extends Component {
     this.state = {
       isLoading: true,
       projectList: [],
+      unFilteredProjectList: [],
     };
+
+    this.onSearchTypeHandler = this.onSearchTypeHandler.bind(this);
   }
 
   async componentDidMount() {
     await axios.get(api).then((item) => {
       this.setState({
         projectList: item.data,
+        unFilteredProjectList: item.data,
       });
     });
     setTimeout(async () => {
@@ -29,6 +33,18 @@ class App extends Component {
         isLoading: false,
       });
     }, 2000);
+  }
+
+  onSearchTypeHandler(search) {
+    const defaultValue = (this.state.projectList = this.state.unFilteredProjectList);
+    if (search.length !== 0 && search.trim() !== "") {
+      this.setState({
+        projectList: this.state.projectList.filter((lists) =>
+          lists.name.toLowerCase().includes(search.toLowerCase())
+        ),
+      });
+      return defaultValue;
+    };
   }
 
   render() {
@@ -48,6 +64,7 @@ class App extends Component {
                       isLoading={this.state.isLoading}
                       lists={this.state.projectList}
                       cards={this.state.projectList.length}
+                      onSearch={this.onSearchTypeHandler}
                     />
                   }
                 />

@@ -1,15 +1,20 @@
 import React from "react";
 import LoadingCard from "./Loading/LoadingCard";
-import ProjectCard from "./Main/ProjectCard";
+import ProjectContainer from "./Main/ProjectContainer";
 import "./Main/styles/styles.css";
 
-export default function LoadProjectItem({ lists, cards, isLoading }) {
+export default function LoadProjectItem({
+  lists,
+  cards,
+  onSearch,
+  isLoading,
+}) {
   return (
     <>
       {isLoading === true ? (
         <LoadingCard cards={cards} />
       ) : (
-        <ProjectCard lists={lists} />
+        <ProjectContainer lists={lists} onSearch={onSearch} />
       )}
     </>
   );
