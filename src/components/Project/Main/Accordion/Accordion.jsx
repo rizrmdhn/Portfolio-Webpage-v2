@@ -48,7 +48,7 @@ export default function Accordion({ onSearchType }) {
                 value="JavaScript"
               />
               <label className="form-check-label" htmlFor="Option1">
-              JavaScript
+                JavaScript
               </label>
             </div>
             <div className="form-check">
@@ -61,6 +61,18 @@ export default function Accordion({ onSearchType }) {
               />
               <label className="form-check-label" htmlFor="Option2">
                 Vue
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="option"
+                id="Option3"
+                value="HasHomepage"
+              />
+              <label className="form-check-label" htmlFor="Option3">
+                Has Homepage
               </label>
             </div>
           </div>

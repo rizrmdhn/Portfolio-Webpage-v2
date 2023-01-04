@@ -55,6 +55,15 @@ class App extends Component {
   onSearchTypeHandler(option) {
     const defaultValue = (this.state.projectList =
       this.state.unFilteredProjectList);
+    const hasHompage = this.state.projectList.filter(
+      (lists) => lists.homepage !== "" && lists.homepage !== null
+    );
+    if (option === "HasHomepage") {
+      this.setState({
+        projectList: hasHompage,
+      })
+      return defaultValue;
+    }
     if (option !== "None") {
       this.setState({
         projectList: this.state.unFilteredProjectList.filter((lists) =>
