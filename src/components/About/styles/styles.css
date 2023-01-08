@@ -1,5 +1,10 @@
 .about-page {
-    color: white;
-    width: 600px;
-    text-align: center;
+  color: white;
+  width: 600px;
+  text-align: center;
+}
+@media screen and (max-width: 450px) {
+  .about > h1 {
+    font-size: 20px;
+  }
 }

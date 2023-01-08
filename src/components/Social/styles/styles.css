@@ -55,3 +55,18 @@
 .bi-linkedin {
   margin-right: 10px;
 }
+@media screen and (max-width: 450px) {
+  .social-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .twitter-link {
+    margin: 15px auto;
+  }
+  .github-link {
+    margin: 15px auto;
+  }
+  .linkedin-link {
+    margin: 15px auto;
+  }
+}

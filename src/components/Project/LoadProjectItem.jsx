@@ -11,12 +11,12 @@ export default function LoadProjectItem({
   isLoading,
 }) {
   return (
-    <div>
+    <>
       {isLoading === true ? (
         <LoadingCard cards={cards} />
       ) : (
         <ProjectContainer lists={lists} onSearch={onSearch} onSearchType={onSearchType} />
       )}
-    </div>
+    </>
   );
 }

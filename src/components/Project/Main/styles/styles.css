@@ -37,7 +37,7 @@
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 1fr); 
+  grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 10px;
 }
@@ -86,4 +86,54 @@
 }
 .project-card-container::-webkit-scrollbar-thumb {
   background: #242c49;
+}
+
+/* responsive stuff */
+@media screen and (max-width: 450px) {
+  .project-container {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .project-menu {
+    border-right: none;
+    margin: auto;
+    margin-top: 20px;
+    height: inherit;
+  }
+  .accordion {
+    margin-right: 0px;
+  }
+  .form-floating {
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .project-card-container {
+    margin: 25px auto;
+    margin-left: 10px;
+    height: 550px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+  .project-card {
+    width: 250px;
+    height: auto !important;
+    margin: 10px;
+  }
+  .link-container {
+    width: auto;
+    margin: 10px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
