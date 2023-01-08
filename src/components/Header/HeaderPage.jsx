@@ -7,12 +7,6 @@ import "./styles/styles.css";
 export default function HeaderPage() {
   const [isOpen, setOpen] = useState(false);
 
-  const Animate = () => {
-    // Look for .hamburger
-    var hamburger = document.getElementById("hamburger-menu");
-    hamburger.classList.toggle("is-active");
-  };
-
   const location = useLocation();
   return (
     <div className="Header">
@@ -28,9 +22,8 @@ export default function HeaderPage() {
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasMenu"
             aria-controls="offcanvasMenu"
-            onClick={Animate}
           >
-            <Hamburger toggled={isOpen} toggle={setOpen} />
+            <Hamburger toggled={isOpen} toggle={setOpen} size={34} />
           </button>
         </div>
       </div>
