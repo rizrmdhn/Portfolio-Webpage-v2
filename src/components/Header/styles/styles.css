@@ -62,6 +62,12 @@
   margin: auto;
   margin-right: 15px;
 }
+.link-button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+}
 .offcanvas-body > .nav > .nav-item > .nav-link {
   color: white;
   font-size: 20px;

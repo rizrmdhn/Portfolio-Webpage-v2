@@ -10,7 +10,7 @@ export default function SocialPage() {
           href="https://twitter.com/AzzezEd"
           target="_blank"
         >
-          <i class="bi bi-twitter"></i>
+          <i className="bi bi-twitter"></i>
           Twitter
         </a>
         <a
@@ -18,7 +18,7 @@ export default function SocialPage() {
           href="https://github.com/rizrmdhn"
           target="_blank"
         >
-          <i class="bi bi-github"></i>
+          <i className="bi bi-github"></i>
           Github
         </a>
         <a
@@ -26,7 +26,7 @@ export default function SocialPage() {
           href="http://linkedin.com/in/noor-rizki-ramadhan-036aaa24b/"
           target="_blank"
         >
-          <i class="bi bi-linkedin"></i>
+          <i className="bi bi-linkedin"></i>
           Linkedin
         </a>
       </div>

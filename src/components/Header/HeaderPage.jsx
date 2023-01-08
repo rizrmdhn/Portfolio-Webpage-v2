@@ -38,22 +38,46 @@ export default function HeaderPage() {
           <ul className="nav flex-column">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                About
+                <button
+                  className="link-button"
+                  data-bs-dismiss="offcanvas"
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  About
+                </button>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Project">
-                Project
+                <button
+                  className="link-button"
+                  data-bs-dismiss="offcanvas"
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  Project
+                </button>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Experience">
-                Experience
+                <button
+                  className="link-button"
+                  data-bs-dismiss="offcanvas"
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  Experience
+                </button>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Social">
-                Social
+                <button
+                  className="link-button"
+                  data-bs-dismiss="offcanvas"
+                  onClick={() => setOpen(!isOpen)}
+                >
+                  Social
+                </button>
               </Link>
             </li>
           </ul>
