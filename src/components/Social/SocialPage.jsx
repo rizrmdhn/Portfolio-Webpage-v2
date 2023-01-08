@@ -21,6 +21,14 @@ export default function SocialPage() {
           <i class="bi bi-github"></i>
           Github
         </a>
+        <a
+          className="linkedin-link"
+          href="http://linkedin.com/in/noor-rizki-ramadhan-036aaa24b/"
+          target="_blank"
+        >
+          <i class="bi bi-linkedin"></i>
+          Linkedin
+        </a>
       </div>
     </div>
   );
