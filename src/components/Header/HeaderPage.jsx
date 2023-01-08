@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Squash as Hamburger } from "hamburger-react";
 import Location from "./Location";
 import "./styles/styles.css";
 
 export default function HeaderPage() {
+  const [isOpen, setOpen] = useState(false);
+
   const Animate = () => {
     // Look for .hamburger
     var hamburger = document.getElementById("hamburger-menu");
@@ -20,16 +23,14 @@ export default function HeaderPage() {
         <div className="menu-button">
           <button
             id="hamburger-menu"
-            className="menu hamburger hamburger--collapse"
+            className="menu"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasMenu"
             aria-controls="offcanvasMenu"
             onClick={Animate}
           >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
+            <Hamburger toggled={isOpen} toggle={setOpen} />
           </button>
         </div>
       </div>

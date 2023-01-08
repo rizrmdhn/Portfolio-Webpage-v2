@@ -24,7 +24,7 @@
   align-self: center;
 }
 .offcanvas.offcanvas-end {
-  top: 0px ;
+  top: 0px;
   right: 0;
   width: var(--bs-offcanvas-width);
   border-left: 2px solid #2b3457 !important;
@@ -55,15 +55,12 @@
 .header-item {
   height: inherit;
 }
-.menu-button > .menu {
-  height: inherit;
-}
-.hamburger-inner::before,
-.hamburger-inner::after {
-  background-color: white !important;
-}
-.hamburger-inner {
-  background-color: white !important;
+#hamburger-menu {
+  background-color: inherit;
+  border: none;
+  color: white;
+  margin: auto;
+  margin-right: 15px;
 }
 .offcanvas-body > .nav > .nav-item > .nav-link {
   color: white;
