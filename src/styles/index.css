@@ -20,6 +20,7 @@ body {
 }
 .container {
   width: 1000px;
+  height: 635px;
   min-height: 75vh;
   padding: 0 !important;
   display: flex;

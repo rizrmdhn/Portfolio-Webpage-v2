@@ -89,6 +89,56 @@
 }
 
 /* responsive stuff */
+@media screen and (max-width: 1366px) {
+  .project-container {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .project-menu {
+    border-right: 1px solid #242c49;
+    margin: 0px auto;
+    margin-left: 10px;
+    height: inherit;
+  }
+  .accordion {
+    margin-right: 25px;
+  }
+  .form-floating {
+    margin-top: 25px;
+    margin-right: 25px;
+  }
+  .project-card-container {
+    margin: 25px auto;
+    margin-left: 10px;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+  .project-card {
+    width: 400px;
+    height: 206px !important;
+    margin: 10px;
+    margin-top: 0px;
+  }
+  .link-container {
+    width: auto;
+    margin: 10px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
 @media screen and (max-width: 450px) {
   .project-container {
     width: auto;

@@ -1,5 +1,6 @@
 .Header {
   border-bottom: 2px #2b3457 solid;
+  height: auto;
 }
 .header-item {
   display: flex;
@@ -78,6 +79,33 @@
   color: white;
   font-size: 25px;
 }
+
+@media screen and (max-width: 1366px) {
+  .offcanvas.offcanvas-end {
+    top: -0px !important;
+    right: 0;
+    width: var(--bs-offcanvas-width);
+    border-left: 2px solid #2b3457 !important;
+    transform: translateX(100%);
+  }
+  .offcanvas {
+    position: relative !important;
+    left: 920px;
+    bottom: 0;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    height: 550px;
+    color: white !important;
+    visibility: hidden;
+    background-color: #181d31 !important;
+    background-clip: padding-box;
+    outline: 0;
+    border-bottom-right-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
 @media screen and (max-width: 450px) {
   .offcanvas.offcanvas-end {
     top: 0px;
@@ -94,7 +122,32 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    min-height: 90vh;
+    min-height: 85vh;
+    color: white !important;
+    visibility: hidden;
+    background-color: #181d31 !important;
+    background-clip: padding-box;
+    outline: 0;
+    border-bottom-right-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .offcanvas.offcanvas-end {
+    border-left: none !important;
+  }
+  .offcanvas {
+    position: relative !important;
+    left: 0px;
+    bottom: 0px;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    height: 150px !important;
     color: white !important;
     visibility: hidden;
     background-color: #181d31 !important;
